@@ -108,18 +108,19 @@ body {
   100% { transform: translateX(10vh); }
 }
 
-/* Mar corregido */
+/* Mar ajustado */
 .sea {
-  position: fixed;   /* fijo al fondo */
+  position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vw;      /* ancho total ventana */
-  height: 25vh;      /* 25% de la altura viewport */
+  width: 100vw;
+  height: 15vh;  /* MÁS BAJO que antes */
   background: linear-gradient(to top, #00008B, #1E90FF, #7ac0eb);
-  z-index: 1;        /* detrás de otros elementos */
+  z-index: 1;
 }
 
 /* Barco y animación */
+/* Barco flotando justo encima del mar */
 .boat {
   height: 45px;
   width: 130px;
@@ -127,7 +128,7 @@ body {
   border-bottom-right-radius: 50px;
   background: #cb3a37;
   position: absolute;
-  bottom: 20%;
+  bottom: 15vh; /* MISMO valor que el mar para que "flote" justo arriba */
   z-index: 3;
   animation: boat-moving 40s linear infinite;
 }
